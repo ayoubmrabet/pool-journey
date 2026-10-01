@@ -4,7 +4,7 @@ int	check_base(char	*base);
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int		len;
+	int			len;
 	long int	nbr_l;
 
 	nbr_l = nbr;
@@ -15,7 +15,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	len = check_base(base);
 	if (len == 1 || len == 0)
-		return;
+		return ;
 	if (nbr_l / len)
 		ft_putnbr_base(nbr_l / len, base);
 	write(1, &base[nbr_l % len], 1);
